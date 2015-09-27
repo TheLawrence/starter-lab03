@@ -40,12 +40,12 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['sleep'] = 'first/zzz';
-$route['lock/(:any)/(:any)'] = 'welcome/shucks';
-$route['show/(:num)'] = 'first/gimme/$1';
-$route['dunno'] = 'guess';
-$route['(?i)([a-z]{4})/bingo'] = 'bingo';
-$route['(?i)(comp(\d){4})/(.*)'] = 'bingo/wisdom';
+$route['sleep'] = 'first/zzz';  //redirects the url /sleep to the first controller's zzz method
+$route['lock/(:any)/(:any)'] = 'welcome/shucks';    //redirects the url /lock/*/* to the welcome controller's shucks method
+$route['show/(:num)'] = 'first/gimme/$1';   //redirects the url /show/number to the first controller's gimme method with $1 as a parameter
+$route['dunno'] = 'guess';  //redirects the url /dunno to the guess controller's index method
+$route['(?i)([a-z]{4})/bingo'] = 'bingo';   //redirects the url xxxx/bingo to the bingo controller's index method
+$route['(?i)(comp(\d){4})/(.*)'] = 'bingo/wisdom';  //redirects the url compXXXX/XXXXX to the bingo controller's wisdom method
 
 
 /* End of file routes.php */

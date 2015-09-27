@@ -7,12 +7,18 @@
  */
 
 /**
- * Description of Welcome
+ * This controller is used to display the last object in the Quotes model. It is 
+ * called Welcome.php because the default controller name in the routes.php file
+ * is 'welcome'.
  *
  * @author Lawrence
  */
 class Welcome extends Application {
     
+    /*
+     * This method displays the last Quotes object's data in the justone view
+     * using the Quotes model's last method.
+     */
     function index() 
     {
         $this->data['pagebody'] = 'justone';

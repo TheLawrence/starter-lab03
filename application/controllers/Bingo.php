@@ -7,12 +7,17 @@
  */
 
 /**
- * Description of Bingo
+ * This controller is used to display the Quotes objects with the id of 5 and 6.
+ * This is done using the routes.php file.
  *
  * @author Lawrence
  */
 class Bingo extends Application {
     
+    /*
+     * This is the method of the Bingo controller which displays the 
+     * Quotes object's data with the id of 5 in the justone view.
+     */
     function index() {
         $this->data['pagebody'] = 'justone';
         
@@ -23,6 +28,10 @@ class Bingo extends Application {
         $this->render();
     }
     
+    /*
+     * This is the method of the Bingo controller which displays the 
+     * Quotes object's data with the id of 6 in the justone view.
+     */
     function wisdom() {
         $this->data['pagebody'] = 'justone';
         
