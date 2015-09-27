@@ -18,6 +18,10 @@ class Welcome extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
+    /*
+     * This method is the default method which uses the all method of the Quotes model to 
+     * display all the Quotes objects. It uses the homepage view to display them.
+     */
     function index() {
         $this->data['pagebody'] = 'homepage';    // this is the view we want shown
         // build the list of authors, to pass on to our view
@@ -31,6 +35,11 @@ class Welcome extends Application {
         $this->render();
     }
     
+    
+    /*
+     *  This method displays a single person's page using the justone view.
+     *  It uses the get method of the Quotes model.     
+     */
     function shucks() {
         $this->data['pagebody'] = 'justone';
         $source = $this->quotes->get(2);
